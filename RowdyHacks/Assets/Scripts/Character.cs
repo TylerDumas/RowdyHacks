@@ -11,7 +11,7 @@ public abstract class Character : MonoBehaviour
    public int attack;
    public int defence;
    public int magic;
-   public String name;
+   public string name;
 
    public abstract void CharacterAbility();
 }
