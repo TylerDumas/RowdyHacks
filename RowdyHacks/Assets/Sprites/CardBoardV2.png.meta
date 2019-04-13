@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:RowdyHacks/Assets/Sprites/CardBoardV2.png.meta
 guid: d0679c8835db6254985dc548a8397efa
+=======
+guid: 52c38773ddcaa493a8ad406446c597d6
+>>>>>>> 2821d6221e9217f8ef77eaa041f2b9e8d9f40230:RowdyHacks/Assets/Sprites/CardBoardV2.png.meta
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -75,7 +79,11 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
+<<<<<<< HEAD:RowdyHacks/Assets/Sprites/CardBoardV2.png.meta
     spriteID: 159bdb6850b5df44eaeeca0f50cd20e3
+=======
+    spriteID: 5b5774a0398da4ae69ce21a8c25afc99
+>>>>>>> 2821d6221e9217f8ef77eaa041f2b9e8d9f40230:RowdyHacks/Assets/Sprites/CardBoardV2.png.meta
     vertices: []
     indices: 
     edges: []
