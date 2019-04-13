@@ -5,7 +5,6 @@ using UnityEngine;
 public class Party : MonoBehaviour
 {
 	private Queue<Character> characterList;
-	private Character activeCharacter;
 	private int block;
 
 	public void Rotate(int amount=1) {
@@ -15,6 +14,21 @@ public class Party : MonoBehaviour
 	}
 
 	public void TakeDamage(DamageEvent damage){
-		//unimplemented
+		Character activeCharacter = characterList.Peek();
+
+		switch(damage.distribution){
+			case DistributionType.ActiveOnly:
+				activeCharacter.TakeDamage(damage.amount);
+			break;
+		}
 	}
+
+	public void AccrueBlock(int amount){
+		this.block += amount;
+	}
+
+	public void ResetBlock(){
+		this.block = 0;
+	}
+
 }
