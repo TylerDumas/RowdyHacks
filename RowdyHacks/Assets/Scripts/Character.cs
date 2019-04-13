@@ -14,4 +14,5 @@ public abstract class Character : MonoBehaviour
    public string name;
 
    public abstract void CharacterAbility();
+   public abstract void TakeDamage(int amount);
 }
