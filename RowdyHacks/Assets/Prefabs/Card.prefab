@@ -307,7 +307,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: d0679c8835db6254985dc548a8397efa, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -330,7 +330,7 @@ MonoBehaviour:
   cardDescription: {fileID: 7690907033489204843}
   cardArtwork: {fileID: 7690907032379753976}
   cardTypeIndicator: {fileID: 7690907033014936215}
-  card: {fileID: 11400000, guid: d1cfe8eea65264fecab7bf86e4884ab5, type: 2}
+  card: {fileID: 0}
 --- !u!1 &7690907033014936209
 GameObject:
   m_ObjectHideFlags: 0
