@@ -1,10 +1,10 @@
 using System;
 
-public struct DamangeEvent {
+public struct DamageEvent {
 	public int amount;
 	public DistributionType distribution;
 
-	public DamangeEvent(int amount, DistributionType dt=ActiveOnly) {
+	public DamageEvent(int amount, DistributionType dt=DistributionType.ActiveOnly) {
 		this.amount = amount;
 		this.distribution = dt;
 	}
