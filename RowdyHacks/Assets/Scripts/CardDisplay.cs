@@ -20,8 +20,8 @@ public class CardDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start(){
         /* Set each text element */
-        cardName.SetText(card.cardName);
-        cardDescription.SetText(card.description);
-        cardArtwork.sprite = card.artwork;
+        cardName.SetText(card.nameOfCard);  //set name text 
+        cardDescription.SetText(card.description);  //set description text
+        cardArtwork.sprite = card.artwork;  //set character sprite
     }
 }
