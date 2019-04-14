@@ -247,7 +247,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cb039f4afefe74476ad675cafb837038, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 87064a066bbde4c5fabf98515ef829de, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -255,7 +255,7 @@ SpriteRenderer:
   m_Size: {x: 1.92, y: 2.88}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &61587483
@@ -308,7 +308,18 @@ MonoBehaviour:
   defense: 5
   magic: 1
   characterName: Knight
-  classCards: []
+  classCards:
+  - {fileID: 11400000, guid: ac1f020bcb8c842d5a270f915abdc3ec, type: 2}
+  - {fileID: 11400000, guid: 767d5d2ec23c444a7921d9f7f9f39c47, type: 2}
+  - {fileID: 11400000, guid: 11bceada539244252b6b6b61f4b9bf2e, type: 2}
+  - {fileID: 11400000, guid: 7337e39f4fe614f0c8f7806de6f46945, type: 2}
+  - {fileID: 11400000, guid: 246f0b436607e40e78f2bc9c39951a5b, type: 2}
+  - {fileID: 11400000, guid: d40a7442daa464c19bd12fc97a83b5a3, type: 2}
+  - {fileID: 11400000, guid: 325959946e8834b2ca2d2be9ef02c8c7, type: 2}
+  - {fileID: 11400000, guid: 53c4b612c49944eab8909cb66a1fd0dc, type: 2}
+  - {fileID: 11400000, guid: 1d7542ccb109c49ba91f5d5cc0ba0898, type: 2}
+  - {fileID: 11400000, guid: 0e1322de3ce18488e8598ccd05d6a33d, type: 2}
+  type: Knight
 --- !u!1 &89959313
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,16 +973,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7690907032736345635, guid: e974c8556d66e44f3ad2deeacdef0621,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1093,6 +1094,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 401989e10cd2f45a08f87c8c3cdfa463,
         type: 2}
+    - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7690907033489204843, guid: e974c8556d66e44f3ad2deeacdef0621,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -1428,16 +1439,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7690907032736345635, guid: e974c8556d66e44f3ad2deeacdef0621,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1559,6 +1560,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 401989e10cd2f45a08f87c8c3cdfa463,
         type: 2}
+    - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7690907033489204843, guid: e974c8556d66e44f3ad2deeacdef0621,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -1806,16 +1817,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7690907032736345635, guid: e974c8556d66e44f3ad2deeacdef0621,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1937,6 +1938,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 401989e10cd2f45a08f87c8c3cdfa463,
         type: 2}
+    - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7690907033489204843, guid: e974c8556d66e44f3ad2deeacdef0621,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -2841,16 +2852,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7690907032736345635, guid: e974c8556d66e44f3ad2deeacdef0621,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2972,6 +2973,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 401989e10cd2f45a08f87c8c3cdfa463,
         type: 2}
+    - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7690907033489204843, guid: e974c8556d66e44f3ad2deeacdef0621,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -3089,16 +3100,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Card
-      objectReference: {fileID: 0}
-    - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7690907032736345635, guid: e974c8556d66e44f3ad2deeacdef0621,
         type: 3}
@@ -3226,6 +3227,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 401989e10cd2f45a08f87c8c3cdfa463,
         type: 2}
+    - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7690907033489204843, guid: e974c8556d66e44f3ad2deeacdef0621,
         type: 3}
       propertyPath: m_havePropertiesChanged

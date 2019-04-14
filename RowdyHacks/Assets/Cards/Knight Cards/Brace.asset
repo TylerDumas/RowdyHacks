@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Brace
   m_EditorClassIdentifier: Assembly-CSharp::KnightCard
-  nameOfCard: 
+  nameOfCard: Brace
   description: 
   artwork: {fileID: 0}
   type: Knight

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Charge
   m_EditorClassIdentifier: Assembly-CSharp::KnightCard
-  nameOfCard: 
+  nameOfCard: Charge
   description: 
   artwork: {fileID: 0}
   type: Knight
