@@ -16,4 +16,12 @@ public abstract class Character : MonoBehaviour
    public List<Card> classCards; 
    public abstract void CharacterSwap();
    public abstract void TakeDamage(int amount);
+
+    private void Update()
+    {
+        if(health <= 0)
+        {
+            gameObject.SetActive(false);
+        }
+    }
 }

@@ -9,8 +9,10 @@ public class Enemy : MonoBehaviour
     public int defense;
     public int magic;
 
-    public void TakeDamage(int amount){
-    	health -= amount;
-    }
+    public Character[] targets;
 
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+    }
 }

@@ -7,7 +7,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Character[] characters;
     private Animator anim;
-    private List<Enemy> enemyList;
+
+    public Enemy enemy;
+
     private Party party;
     private Queue<Card> cardQueue;
     public List<Card> hand;
@@ -87,7 +89,10 @@ public class GameManager : MonoBehaviour
     }
 
     private void EnemyActionPhase(){
-
+        int rNum = Random.Range(0, 2);
+        enemy.targets[rNum].health -= enemy.attack;
+        MakeNumber(NumberIndicatorType.Damage, 10, enemy.targets[rNum].transform.position);
+        anim.SetTrigger("enemyIsDone");
     }
 
     private void ReturnCardsToDeckPhase(){
@@ -129,8 +134,8 @@ public class GameManager : MonoBehaviour
 
     private void CardAttack(){
         int damage = party.GetFowardCharacter().attack;
-        enemyList[2].TakeDamage(damage);
-        MakeNumber(NumberIndicatorType.Damage, damage, enemyList[2].transform.position);
+        enemy.TakeDamage(damage);
+        MakeNumber(NumberIndicatorType.Damage, damage, enemy.transform.position);
     }
 
     private void CardBlock(){
