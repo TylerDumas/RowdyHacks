@@ -11,14 +11,20 @@ public class DamageNumberController : MonoBehaviour
 	public float duration = 3f;
 	public float height = 2f;
 
+	public Color baseColor = Color.white;
+
 	public Color highDamageColor = Color.red;
 	public int highDamageThreshold = 25;
+
+	public Color blockColor = Color.blue;
+	public Color healColor = Color.green;
 
 	public AnimationCurve opacityCurve;
 	private Vector3 start;
 	private Vector3 end;
 	private int damageValue;
 	private TextMeshPro tmpro;
+	private NumberIndicatorType type = NumberIndicatorType.Damage;
 
 	void Start(){
 		tmpro = GetComponent<TextMeshPro>();
@@ -33,7 +39,14 @@ public class DamageNumberController : MonoBehaviour
 
 	IEnumerator Move() {
 		float startTime = Time.time;
-		Color faceColor = Color.Lerp(tmpro.fontMaterial.GetColor(ShaderUtilities.ID_FaceColor), highDamageColor, (float) damageValue / highDamageThreshold);
+		Color faceColor = baseColor;
+		if(type == NumberIndicatorType.Damage){
+			faceColor = Color.Lerp(tmpro.fontMaterial.GetColor(ShaderUtilities.ID_FaceColor), highDamageColor, (float) damageValue / highDamageThreshold);
+		} else if(type == NumberIndicatorType.Block){
+			faceColor = blockColor;
+		} else if(type == NumberIndicatorType.Heal) {
+			faceColor = healColor;
+		}
 		Color underlayColor = tmpro.fontMaterial.GetColor(ShaderUtilities.ID_UnderlayColor);
 		float cursor = 0;
 		while(cursor <= 1) {
@@ -62,8 +75,18 @@ public class DamageNumberController : MonoBehaviour
 		}
 	}
 
+	public void setIndicatorType(NumberIndicatorType type){
+		this.type = type;
+	}
+
 	private Vector3 randVec3(){
 		return new Vector3(UnityEngine.Random.Range(-1f,1f), UnityEngine.Random.Range(-1f,1f), UnityEngine.Random.Range(-1f,1f));
 	}
 
+}
+
+public enum NumberIndicatorType {
+	Damage,
+	Block,
+	Heal
 }

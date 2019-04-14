@@ -18,7 +18,9 @@ public class NumberGenerator : MonoBehaviour
         	int damage = (int) Mathf.Round(UnityEngine.Random.Range(1, 25));
         	Debug.Log(String.Format("New Damage: {0}", damage));
         	GameObject number = Instantiate(numberPrefab) as GameObject;
-        	number.GetComponent<DamageNumberController>().setDamageValue(damage);
+            DamageNumberController dnc = number.GetComponent<DamageNumberController>();
+        	dnc.setDamageValue(damage);
+            dnc.setIndicatorType((NumberIndicatorType) Mathf.Round(UnityEngine.Random.Range(0, 3)));
         }
     }
 }
