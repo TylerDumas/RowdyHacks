@@ -11,11 +11,7 @@ public class GameManager : MonoBehaviour
 
 
     void Start(){
-<<<<<<< HEAD
-    	anim = GetComponent<anim>();
-=======
-    	amin = GetComponent<anim>();
->>>>>>> 3e5c41b36f6025dac63883d909048be48e92648e
+    	anim = GetComponent<Animator>();
     }
 
     void Update(){
@@ -28,15 +24,15 @@ public class GameManager : MonoBehaviour
     		PlayerActionPhase();
     	} else if(currentState.IsName("EnemyActionPhase")){
     		EnemyActionPhase();
-    	} else if(CurrentState.IsName("ReturnCardsToDeckPhase")){
+    	} else if(currentState.IsName("ReturnCardsToDeckPhase")){
     		ReturnCardsToDeckPhase();
-    	} else if(CurrentState.IsName("PlayerSwapPhase")) {
+    	} else if(currentState.IsName("PlayerSwapPhase")) {
     		PlayerSwapPhase();
-    	} else if(CurrentState.IsName("Victory")) {
+    	} else if(currentState.IsName("Victory")) {
     		Victory();
-    	} else if(CurrentState.IsName("Failure")){
+    	} else if(currentState.IsName("Failure")){
     		Failure();
-    	} else if(CurrentState.IsName("Cleanup")){
+    	} else if(currentState.IsName("Cleanup")){
     		Cleanup();
     	}
     }
