@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private Object number;
 
     void Start(){
+        party = new Party(0, 3);
         cardQueue = new Queue<Card>();
     	anim = GetComponent<Animator>();
         number = Resources.Load("Number");
@@ -31,7 +32,7 @@ public class GameManager : MonoBehaviour
     void Update(){
     	AnimatorStateInfo currentState = anim.GetCurrentAnimatorStateInfo(0);
 
-        if(anim.IsInTransition()) return;
+        if(anim.IsInTransition(0)) return;
 
         anim.SetInteger("playerEnergy", party.energy);
 
@@ -54,10 +55,13 @@ public class GameManager : MonoBehaviour
     	} else if(currentState.IsName("Cleanup")){
     		Cleanup();
     	}
+        if (enemy.health <= 0)
+        {
+            anim.SetTrigger("lastEnemyDead");
+        }
     }
 
     private void BattleSetup(){
-        party = new Party(0, 3);        //Create Party
         foreach(Character character in characters)  //Create Characters
         {
             party.characterList.Add(character);
@@ -87,7 +91,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void ReturnCardsToDeckPhase(){
-        anim.SetTrigger("handIsEmpty");
+        anim.SetTrigger("handsEmpty");
     }
 
     private void PlayerSwapPhase(){
