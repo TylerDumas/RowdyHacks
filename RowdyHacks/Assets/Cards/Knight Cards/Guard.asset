@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: Guard
   m_EditorClassIdentifier: Assembly-CSharp::KnightCard
   nameOfCard: Guard
-  description: Swap + Block
+  description: 
   artwork: {fileID: 0}
-  attack: 0
-  defend: 0
   type: Knight

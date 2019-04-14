@@ -255,7 +255,7 @@ SpriteRenderer:
   m_Size: {x: 1.92, y: 2.88}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &61587483
@@ -315,9 +315,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 325959946e8834b2ca2d2be9ef02c8c7, type: 2}
   - {fileID: 11400000, guid: d40a7442daa464c19bd12fc97a83b5a3, type: 2}
   - {fileID: 11400000, guid: 2f8923400169240b5a8aed805e55f060, type: 2}
-  - {fileID: 11400000, guid: e30311721caf14d4990714297b1c6325, type: 2}
-  - {fileID: 11400000, guid: 0660f2c0f3a0b4ed4986aa438978114e, type: 2}
+  - {fileID: 11400000, guid: 11bceada539244252b6b6b61f4b9bf2e, type: 2}
   - {fileID: 11400000, guid: 767d5d2ec23c444a7921d9f7f9f39c47, type: 2}
+  - {fileID: 11400000, guid: 7337e39f4fe614f0c8f7806de6f46945, type: 2}
   - {fileID: 11400000, guid: a855fdcdfa4114aa280b4223a2e08c59, type: 2}
   - {fileID: 11400000, guid: ac1f020bcb8c842d5a270f915abdc3ec, type: 2}
   type: Knight
@@ -775,7 +775,7 @@ SpriteRenderer:
   m_Size: {x: 1.92, y: 2.88}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &531921742
@@ -875,7 +875,7 @@ SpriteRenderer:
   m_Size: {x: 1.92, y: 2.88}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &531921746
