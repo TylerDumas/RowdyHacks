@@ -309,16 +309,16 @@ MonoBehaviour:
   magic: 1
   characterName: Knight
   classCards:
-  - {fileID: 11400000, guid: ac1f020bcb8c842d5a270f915abdc3ec, type: 2}
-  - {fileID: 11400000, guid: 767d5d2ec23c444a7921d9f7f9f39c47, type: 2}
-  - {fileID: 11400000, guid: 11bceada539244252b6b6b61f4b9bf2e, type: 2}
-  - {fileID: 11400000, guid: 7337e39f4fe614f0c8f7806de6f46945, type: 2}
-  - {fileID: 11400000, guid: 246f0b436607e40e78f2bc9c39951a5b, type: 2}
-  - {fileID: 11400000, guid: d40a7442daa464c19bd12fc97a83b5a3, type: 2}
-  - {fileID: 11400000, guid: 325959946e8834b2ca2d2be9ef02c8c7, type: 2}
-  - {fileID: 11400000, guid: 53c4b612c49944eab8909cb66a1fd0dc, type: 2}
-  - {fileID: 11400000, guid: 1d7542ccb109c49ba91f5d5cc0ba0898, type: 2}
-  - {fileID: 11400000, guid: 0e1322de3ce18488e8598ccd05d6a33d, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   type: Knight
 --- !u!1 &89959313
 GameObject:
@@ -3580,6 +3580,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1969790028}
+  - component: {fileID: 1969790029}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3601,6 +3602,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1969790029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969790027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57c004e63b973436bba14775a9117393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2064687579
 GameObject:
   m_ObjectHideFlags: 0
