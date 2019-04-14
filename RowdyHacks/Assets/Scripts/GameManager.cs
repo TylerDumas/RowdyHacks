@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
             anim.SetTrigger("lastEnemyDead");
         }
     }
-
+    
     private void BattleSetup(){
         foreach(Character character in characters)  //Create Characters
         {
@@ -134,7 +134,9 @@ public class GameManager : MonoBehaviour
     }
 
     private void CardBlock(){
-
+        int rNum = Random.Range(0, 2);
+        enemy.targets[rNum].defense += 5;
+        MakeNumber(NumberIndicatorType.Block, 5, enemy.targets[rNum].transform.position);
     }
 
     private void CardSwap(){
@@ -144,7 +146,11 @@ public class GameManager : MonoBehaviour
     private void CardStun(){
 
     }
-
+    private void CardHeal() {
+        int rNum = Random.Range(0, 2);
+        enemy.targets[rNum].health += 5;
+        MakeNumber(NumberIndicatorType.Heal, 5, enemy.targets[rNum].transform.position);
+    }
     public void RunCard(Card c){
         foreach(char ch in c.actions){
             switch(ch){
@@ -160,7 +166,7 @@ public class GameManager : MonoBehaviour
                 case 'E': //Energy
                     //Add energy
                 case 'H':
-                    enemy.targets[Random.Range(0, 2)].health += 5;
+                    CardHeal();
                     break;
                 case 'K': //Kill
                     //Attack Up
