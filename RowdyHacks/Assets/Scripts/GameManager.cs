@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
             Card cardForHand = cardQueue.Dequeue();
             hand.Add(cardForHand);
         }
+        anim.SetTrigger("skipSwapPhase");
     }
 
     private void PlayerActionPhase(){
@@ -72,11 +73,22 @@ public class GameManager : MonoBehaviour
     }
 
     private void EnemyActionPhase(){
-
+        float choice = Random.value;
+        if(choice < .5f) { //Attack
+            int target = Random.Range(0,2);
+            Character targetPlayer = party.characterList[target];
+            Vector3 location = targetPlayer.transform.position;
+            int damage = (int) Random.Range(1, 10);
+            targetPlayer.TakeDamage(damage);
+            MakeNumber(NumberIndicatorType.Damage, damage, location);
+        } else { //Block
+            MakeNumber(NumberIndicatorType.Block, (int) Random.Range(1, 10), EnemyList[0].transform.position);
+        }
+        amin.setTrigger("enemyIsDone");
     }
 
     private void ReturnCardsToDeckPhase(){
-
+        anim.SetTrigger("handIsEmpty");
     }
 
     private void PlayerSwapPhase(){
