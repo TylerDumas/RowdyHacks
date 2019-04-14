@@ -6,6 +6,7 @@ public class Knight : Character
 {
     public void Start()
     {
+        classCards = new List<Card>();
         health = 20;
         attack = 3;
         defense = 5;
