@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     private List<Enemy> enemyList;
     private Party party;
     private Queue<Card> cardQueue;
+    public List<Card> hand;
 
     private Object number;
 
@@ -47,11 +48,18 @@ public class GameManager : MonoBehaviour
         foreach(Character character in characters)  //Create Characters
         {
             party.characterList.Add(character);
+            Debug.Log(character.name + "joined" + party.ToString());
         }
+        anim.SetTrigger("setupComplete");
     }
 
     private void PlayerDrawPhase(){
-
+        //Draw 5 Cards
+        for(int i = 0; i < 5; i++)
+        {
+            Card cardForHand = cardQueue.Dequeue();
+            hand.Add(cardForHand);
+        }
     }
 
     private void PlayerActionPhase(){
