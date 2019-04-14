@@ -116,7 +116,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void RunCard(Card c){
-        foreach(char ch in System.char){
+        foreach(char ch in c.actions){
             switch(ch){
                 case 'A':
                     CardAttack();
