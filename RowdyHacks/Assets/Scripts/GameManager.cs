@@ -11,7 +11,11 @@ public class GameManager : MonoBehaviour
 
 
     void Start(){
+<<<<<<< HEAD
     	anim = GetComponent<anim>();
+=======
+    	amin = GetComponent<anim>();
+>>>>>>> 3e5c41b36f6025dac63883d909048be48e92648e
     }
 
     void Update(){
