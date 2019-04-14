@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class HoverOverCard : MonoBehaviour, IPointerEnterHandler
+public class HoverOverCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField]
     private Animator animator;
 
+
     public void OnPointerEnter(PointerEventData eventData)
+    { 
+        animator.SetBool("isHovering", true);
+    }
+    public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("Tits");
+        animator.SetBool("isHovering", false);
     }
 }
