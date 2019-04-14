@@ -15,4 +15,11 @@ public class Enemy : MonoBehaviour
     {
         health -= damage;
     }
+    public void Update()
+    {
+        if(health <= 0)
+        {
+            gameObject.SetActive(false);
+        }
+    }
 }
