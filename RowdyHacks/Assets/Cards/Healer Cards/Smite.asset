@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Bash
-  m_EditorClassIdentifier: Assembly-CSharp::KnightCard
-  nameOfCard: Bash
+  m_Name: Smite
+  m_EditorClassIdentifier: Assembly-CSharp::HealerCard
+  nameOfCard: Smite
   description: 
-  actions: AZ
+  actions: ZH
   artwork: {fileID: 0}
-  type: Knight
+  type: Healer

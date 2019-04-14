@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Bash
+  m_Name: Brace
   m_EditorClassIdentifier: Assembly-CSharp::KnightCard
-  nameOfCard: Bash
+  nameOfCard: Brace
   description: 
-  actions: AZ
+  actions: BB
   artwork: {fileID: 0}
   type: Knight

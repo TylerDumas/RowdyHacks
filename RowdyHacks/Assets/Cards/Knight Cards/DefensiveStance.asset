@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Bash
+  m_Name: DefensiveStance
   m_EditorClassIdentifier: Assembly-CSharp::KnightCard
-  nameOfCard: Bash
+  nameOfCard: Defensive Stance
   description: 
-  actions: AZ
+  actions: BT
   artwork: {fileID: 0}
   type: Knight
