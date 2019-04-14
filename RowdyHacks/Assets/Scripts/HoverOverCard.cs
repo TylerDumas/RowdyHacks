@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class HoverOverCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class HoverOverCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     [SerializeField]
     private Animator animator;
 
+    public GameManager gm;
+
+    public CardDisplay cardDisplay;
     //[SerializeField]
     //private Animator animatorWindow;
 
@@ -21,5 +24,9 @@ public class HoverOverCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         animator.SetBool("isHovering", false);
         //animatorWindow.SetBool("isHovering", false);
+    }
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        gm.PrepareCard(cardDisplay.GetCard());
     }
 }

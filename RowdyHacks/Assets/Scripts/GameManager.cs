@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+    private Character[] characters;
     private Animator anim;
     private List<Enemy> enemyList;
     private Party party;
     private Queue<Card> cardQueue;
 
     private Object number;
-
 
     void Start(){
         cardQueue = new Queue<Card>();
@@ -42,10 +43,11 @@ public class GameManager : MonoBehaviour
     }
 
     private void BattleSetup(){
-    	//TODO set up character positions
-        //TODO set up character health
-        //TODO set up set up player decks and hands
-        //TODO set up 
+        party = new Party(0, 3);        //Create Party
+        foreach(Character character in characters)  //Create Characters
+        {
+            party.characterList.Add(character);
+        }
     }
 
     private void PlayerDrawPhase(){
@@ -93,7 +95,7 @@ public class GameManager : MonoBehaviour
             if (Physics.Raycast(ray, out hit)){
                  if (hit.transform != null) {
                     Debug.Log("HIT A CARD.");
-                     c = hit.transform.gameObject.GetComponent<CardDisplay>().getCard();
+                     c = hit.transform.gameObject.GetComponent<CardDisplay>().GetCard();
                     Debug.Log(c.actions);
                  }
              }
@@ -101,7 +103,6 @@ public class GameManager : MonoBehaviour
 
         return c;
     }
-
 
     private void CardAttack(){
         int damage = party.GetFowardCharacter().attack;
