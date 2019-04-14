@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     private List<Character> characterList;
     private List<Enemy> enemyList;
 
+    public Party party;
+
 
 
     void Start(){
@@ -46,7 +48,12 @@ public class GameManager : MonoBehaviour
     }
 
     private void PlayerActionPhase(){
-
+        Card c = getClickedCard();
+        if(c == null)
+            return;
+        RunCard(c);
+        Party.energy--;
+        anim.SetInt("playerEnergy", Party.energy);
     }
 
     private void EnemyActionPhase(){
@@ -70,6 +77,38 @@ public class GameManager : MonoBehaviour
     }
 
     private void Cleanup() {
+
+    }
+
+    private Card getClickedCard() {
+        Card c = null;
+        if(Input.MouseDown(0)){
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit)){
+                 if (hit.transform != null) {
+                     c = hit.transform.gameObject.GetComponent<CardDisplay>().getCard();
+                 }
+             }
+        }
+
+        return c;
+    }
+
+
+    private void CardAttack(){
+
+    }
+
+    private void CardBlock(){
+
+    }
+
+    private void CardSwap(){
+
+    }
+
+    private void RunCard(Card c){
 
     }
 

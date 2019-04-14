@@ -17,6 +17,8 @@ public class CardDisplay : MonoBehaviour
         
     public Card card;
 
+    public GameManager gm;
+
     // Start is called before the first frame update
     void Start(){
         /* Set each text element */
