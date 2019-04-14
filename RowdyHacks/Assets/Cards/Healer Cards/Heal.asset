@@ -16,4 +16,4 @@ MonoBehaviour:
   description: 
   actions: HH
   artwork: {fileID: 0}
-  type: Healer
+  type: 72
