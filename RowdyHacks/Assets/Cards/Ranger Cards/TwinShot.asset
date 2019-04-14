@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d57cefac248943729456451afe000b8, type: 3}
   m_Name: TwinShot
   m_EditorClassIdentifier: Assembly-CSharp::RangerCard
-  nameOfCard: 
-  description: 
+  nameOfCard: Twin Shot
+  description: shoot two arrows
   actions: 
   artwork: {fileID: 0}
-  type: 0
+  type: 82

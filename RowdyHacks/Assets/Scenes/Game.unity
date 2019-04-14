@@ -1143,7 +1143,7 @@ PrefabInstance:
         type: 3}
       propertyPath: card
       value: 
-      objectReference: {fileID: 11400000, guid: 401989e10cd2f45a08f87c8c3cdfa463,
+      objectReference: {fileID: 11400000, guid: ef65af164a6184c298263126643f3fcd,
         type: 2}
     - target: {fileID: 7690907032736345638, guid: e974c8556d66e44f3ad2deeacdef0621,
         type: 3}
@@ -1625,7 +1625,7 @@ PrefabInstance:
         type: 3}
       propertyPath: card
       value: 
-      objectReference: {fileID: 11400000, guid: 401989e10cd2f45a08f87c8c3cdfa463,
+      objectReference: {fileID: 11400000, guid: 3bc226083373f4727acefa0cbcd7c2f0,
         type: 2}
     - target: {fileID: 7690907032736345638, guid: e974c8556d66e44f3ad2deeacdef0621,
         type: 3}
@@ -2017,7 +2017,7 @@ PrefabInstance:
         type: 3}
       propertyPath: card
       value: 
-      objectReference: {fileID: 11400000, guid: 401989e10cd2f45a08f87c8c3cdfa463,
+      objectReference: {fileID: 11400000, guid: 289da6e14c953448e8d38c54bd56410b,
         type: 2}
     - target: {fileID: 7690907032736345638, guid: e974c8556d66e44f3ad2deeacdef0621,
         type: 3}
@@ -3083,7 +3083,7 @@ PrefabInstance:
         type: 3}
       propertyPath: card
       value: 
-      objectReference: {fileID: 11400000, guid: 401989e10cd2f45a08f87c8c3cdfa463,
+      objectReference: {fileID: 11400000, guid: 767d5d2ec23c444a7921d9f7f9f39c47,
         type: 2}
     - target: {fileID: 7690907032736345638, guid: e974c8556d66e44f3ad2deeacdef0621,
         type: 3}
@@ -3337,25 +3337,21 @@ PrefabInstance:
       propertyPath: gm
       value: 
       objectReference: {fileID: 1969790029}
+    - target: {fileID: 7690907032736345638, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: card
+      value: 
+      objectReference: {fileID: 11400000, guid: 10a673da1a83246e681bb6fcc29632f0,
+        type: 2}
     - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
         type: 3}
       propertyPath: m_havePropertiesChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
         type: 3}
       propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7690907033489204843, guid: e974c8556d66e44f3ad2deeacdef0621,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7690907033489204843, guid: e974c8556d66e44f3ad2deeacdef0621,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e974c8556d66e44f3ad2deeacdef0621, type: 3}

@@ -165,7 +165,7 @@ public class GameManager : MonoBehaviour
                 case 'E': //Energy
                     //Add energy
                 case 'H':
-                    //Heal
+                    enemy.targets[Random.Range(0, 2)].health += 5;
                     break;
                 case 'K': //Kill
                     //Attack Up

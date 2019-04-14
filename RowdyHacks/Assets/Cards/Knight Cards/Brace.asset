@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Brace
   m_EditorClassIdentifier: Assembly-CSharp::KnightCard
   nameOfCard: Brace
-  description: 
+  description: Stun and block your enemy!
   actions: 
   artwork: {fileID: 0}
   type: 75

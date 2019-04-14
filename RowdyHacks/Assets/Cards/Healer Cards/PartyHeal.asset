@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ecadeb291e9a4ab7af33f2ec975823f, type: 3}
   m_Name: PartyHeal
   m_EditorClassIdentifier: Assembly-CSharp::HealerCard
-  nameOfCard: 
-  description: 
-  actions: 
+  nameOfCard: Heal
+  description: Heal your whole team!
+  actions: H
   artwork: {fileID: 0}
   type: 72
