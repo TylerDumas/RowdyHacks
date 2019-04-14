@@ -10,6 +10,10 @@ public class DamageNumberController : MonoBehaviour
 	public float volatility = 1f;
 	public float duration = 3f;
 	public float height = 2f;
+
+	public Color highDamageColor = Color.red;
+	public int highDamageThreshold = 25;
+
 	public AnimationCurve opacityCurve;
 	private Vector3 start;
 	private Vector3 end;
@@ -18,9 +22,9 @@ public class DamageNumberController : MonoBehaviour
 
 	void Start(){
 		tmpro = GetComponent<TextMeshPro>();
-		tmpro.SetText("{0}", 3);
+		tmpro.SetText("{0}", damageValue);
 	
-		start = randVec3() * volatility + transform.position;
+		start = randVec3()	 * volatility + transform.position;
 		end = start + Vector3.up * height + randVec3() * volatility;
 
 		transform.position = start;
@@ -29,7 +33,7 @@ public class DamageNumberController : MonoBehaviour
 
 	IEnumerator Move() {
 		float startTime = Time.time;
-		Color faceColor = tmpro.fontMaterial.GetColor(ShaderUtilities.ID_FaceColor);
+		Color faceColor = Color.Lerp(tmpro.fontMaterial.GetColor(ShaderUtilities.ID_FaceColor), highDamageColor, (float) damageValue / highDamageThreshold);
 		Color underlayColor = tmpro.fontMaterial.GetColor(ShaderUtilities.ID_UnderlayColor);
 		float cursor = 0;
 		while(cursor <= 1) {
@@ -43,13 +47,6 @@ public class DamageNumberController : MonoBehaviour
 			yield return null;
 		}
 		DestroyObject(gameObject);
-	}
-
-	void Update(){
-		if(Input.GetKeyDown(KeyCode.Space)){
-			transform.position = Vector3.zero;
-			Start();
-		}
 	}
 
 	void OnDrawGizmos(){
