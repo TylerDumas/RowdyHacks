@@ -55,8 +55,8 @@ public class GameManager : MonoBehaviour
         if(c == null)
             return;
         RunCard(c);
-        Party.energy--;
-        anim.SetInt("playerEnergy", Party.energy);
+        party.energy--;
+        anim.SetInteger("playerEnergy",  party.energy);
     }
 
     private void EnemyActionPhase(){
@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
 
     private Card getClickedCard() {
         Card c = null;
-        if(Input.MouseDown(0)){
+        if(Input.GetMouseButtonDown(0)){
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit)){
