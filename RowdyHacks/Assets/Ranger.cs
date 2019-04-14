@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ranger : MonoBehaviour
+public class Ranger : Character
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        
+        health = 14;
+        defense = 3;
+        attack = 6;
+        magic = 2;
     }
-
-    // Update is called once per frame
-    void Update()
+    public override void CharacterSwap()
     {
-        
+
+    }
+    public override void TakeDamage(int amount)
+    {
+        health -= 14;   //subtract damage
+        //instantiate damage numbers
     }
 }
