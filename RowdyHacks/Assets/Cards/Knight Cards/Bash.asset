@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Bash
   m_EditorClassIdentifier: Assembly-CSharp::KnightCard
-  nameOfCard: 
-  description: 
+  nameOfCard: Bash
+  description: Swap and Block
   artwork: {fileID: 0}
   type: Knight

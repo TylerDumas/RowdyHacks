@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Defensive Stance
+  m_Name: DefensiveStance
   m_EditorClassIdentifier: Assembly-CSharp::KnightCard
   nameOfCard: 
   description: 
   artwork: {fileID: 0}
-  attack: 0
-  defend: 0
   type: Knight

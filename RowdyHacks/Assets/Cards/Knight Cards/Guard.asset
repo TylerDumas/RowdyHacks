@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Guard
   m_EditorClassIdentifier: Assembly-CSharp::KnightCard
-  nameOfCard: 
+  nameOfCard: Guard
   description: 
   artwork: {fileID: 0}
-  attack: 0
-  defend: 0
   type: Knight
