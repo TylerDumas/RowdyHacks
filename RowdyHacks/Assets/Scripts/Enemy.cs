@@ -9,9 +9,4 @@ public class Enemy : MonoBehaviour
     public int defense;
     public int magic;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
