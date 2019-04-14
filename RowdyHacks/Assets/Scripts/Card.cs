@@ -10,6 +10,9 @@ public abstract class Card : ScriptableObject
 
     public Sprite artwork;  //Character drawing
 
+    public int attack;
+
+    public int defend;
 }
 [CreateAssetMenu(fileName = "New Card", menuName = "Cards/Generic Card")]
 public class GenericCard: Card{
@@ -18,7 +21,6 @@ public class GenericCard: Card{
 [CreateAssetMenu(fileName = "New Card", menuName = "Cards/Knight Card")]
 public class KnightCard : Card{     //Card for Knight
     public string type = "Knight";
-    private int attack;
 }
 [CreateAssetMenu(fileName = "New Card", menuName = "Cards/Ranger Card")]
 public class RangerCard : Card {    //Card for Ranger
