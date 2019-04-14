@@ -8,18 +8,18 @@ public class HoverOverCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     [SerializeField]
     private Animator animator;
 
-    [SerializeField]
-    private Animator animatorWindow;
+    //[SerializeField]
+    //private Animator animatorWindow;
 
     public void OnPointerEnter(PointerEventData eventData)
     { 
         animator.SetBool("isHovering", true);
-        animatorWindow.SetBool("isHovering", true);
+        //animatorWindow.SetBool("isHovering", true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         animator.SetBool("isHovering", false);
-        animatorWindow.SetBool("isHovering", false);
+        //animatorWindow.SetBool("isHovering", false);
     }
 }
