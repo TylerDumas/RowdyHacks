@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class CardDisplay : MonoBehaviour
+public class CardDisplay : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField]
     private TextMeshProUGUI cardName;   //Text element for name
@@ -24,6 +25,9 @@ public class CardDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start(){
         /* Set each text element */
+        if(gm == null){
+        	gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        }
         cardName.SetText(card.nameOfCard);  //set name text 
         cardDescription.SetText(card.description);  //set description text
         cardArtwork.sprite = card.artwork;  //set character sprite
@@ -45,5 +49,9 @@ public class CardDisplay : MonoBehaviour
     public Card getCard()
     {
         return card;
+    }
+
+    public void OnPointerClick(PointerEventData pointerEventData){
+    	gm.PrepareCard(card);
     }
 }

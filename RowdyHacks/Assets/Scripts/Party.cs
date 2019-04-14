@@ -13,7 +13,7 @@ public class Party
 	public int energy;
 
 	public Party() {
-		
+
 	}
 
 	/*
@@ -71,6 +71,11 @@ public class Party
 	 */
 	public void ResetBlock(){
 		this.block = 0;
+	}
+
+
+	public Character GetFowardCharacter(){
+		return characterList[2];
 	}
 }
 

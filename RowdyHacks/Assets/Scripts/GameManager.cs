@@ -7,11 +7,13 @@ public class GameManager : MonoBehaviour
     private Animator anim;
     private List<Enemy> enemyList;
     private Party party;
+    private Queue<Card> cardQueue;
 
     private Object number;
 
 
     void Start(){
+        cardQueue = new Queue<Card>();
     	anim = GetComponent<Animator>();
         number = Resources.Load("Number");
     }
@@ -90,7 +92,9 @@ public class GameManager : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit)){
                  if (hit.transform != null) {
+                    Debug.Log("HIT A CARD.");
                      c = hit.transform.gameObject.GetComponent<CardDisplay>().getCard();
+                    Debug.Log(c.actions);
                  }
              }
         }
@@ -100,7 +104,9 @@ public class GameManager : MonoBehaviour
 
 
     private void CardAttack(){
-        
+        int damage = party.GetFowardCharacter().attack;
+        enemyList[2].TakeDamage(damage);
+        MakeNumber(NumberIndicatorType.Damage, damage, enemyList[2].transform.position);
     }
 
     private void CardBlock(){
@@ -127,11 +133,19 @@ public class GameManager : MonoBehaviour
                 case 'D':
                     //Draw
                     break;
+                case 'E': //Energy
+                    //Add energy
                 case 'H':
                     //Heal
                     break;
+                case 'K': //Kill
+                    //Attack Up
+                    break;
                 case 'M':
                     //Magic Up
+                    break;
+                case 'P': //Push
+                    //Force enemy Swap;
                     break;
                 case 'T': //Tank
                     //+1 Character Defence
@@ -148,6 +162,20 @@ public class GameManager : MonoBehaviour
                     break;
             }
         }
+    }
+
+    private void MakeNumber(NumberIndicatorType type, int amount, Vector3 position){
+        GameObject myNumber = Instantiate(number) as GameObject;
+        DamageNumberController dnc = myNumber.GetComponent<DamageNumberController>();
+        dnc.setDamageValue(amount);
+        dnc.setIndicatorType(type);
+        myNumber.transform.position = position;
+    }
+
+    public void PrepareCard(Card c){
+        if(cardQueue.Count != 0) return;
+        cardQueue.Enqueue(c);
+        Debug.Log("Card Prepared");
     }
 
 }
