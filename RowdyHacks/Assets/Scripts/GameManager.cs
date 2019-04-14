@@ -58,15 +58,29 @@ public class GameManager : MonoBehaviour
         //Draw 5 Cards
         for(int i = 0; i < 5; i++)
         {
-            hand.Add(listOFAllCards[Random.Range(0,listOFAllCards.Length-2)]);
-            Debug.Log("Added a card");
+            if(hand.Count <= 5)
+            {
+                hand.Add(listOFAllCards[Random.Range(0, listOFAllCards.Length - 3)]);
+                Debug.Log("AAAA");
+            }
+
         }
+        anim.SetTrigger("playerHasDrawn");
     }
 
     private void PlayerActionPhase(){
-        Card c = cardQueue.Dequeue();
-        if(c == null)
+        Card c;
+        if (cardQueue.Count <= 0)
+        {
             return;
+        }
+        else
+        {
+            c = cardQueue.Dequeue();
+            if (c == null)
+                return;
+        }
+
         RunCard(c);
         party.energy--;
         anim.SetInteger("playerEnergy",  party.energy);
