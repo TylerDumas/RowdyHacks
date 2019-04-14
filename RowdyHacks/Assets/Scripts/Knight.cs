@@ -9,8 +9,7 @@ public class Knight : Character
     public string type = "Knight";  //Type of Card
 
     public void Start()     //Calls before first frame
-    {
-        classCards = new List<Card>();
+    { 
         health = 20;
         attack = 3;
         defense = 5;

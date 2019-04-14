@@ -24,4 +24,9 @@ public class CardDisplay : MonoBehaviour
         cardDescription.SetText(card.description);  //set description text
         cardArtwork.sprite = card.artwork;  //set character sprite
     }
+
+    public Card getCard()
+    {
+        return card;
+    }
 }
