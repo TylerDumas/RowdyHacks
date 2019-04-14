@@ -6,11 +6,15 @@ using UnityEngine;
  * Class that manages the party. Acts as a damage target for enemies
  * And divies up damage and such as needed.
  */
-public class Party : MonoBehaviour
+public class Party
 {
 	private List<Character> characterList;
 	private int block;
 	public int energy;
+
+	public Party() {
+		
+	}
 
 	/*
 	 * Rotates the party moving the foward most unit

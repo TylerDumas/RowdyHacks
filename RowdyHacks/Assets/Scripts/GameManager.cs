@@ -5,15 +5,15 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private Animator anim;
-    private Queue<Character> characterList;
     private List<Enemy> enemyList;
+    private Party party;
 
-    public Party party;
-
+    private Object number;
 
 
     void Start(){
     	anim = GetComponent<Animator>();
+        number = Resources.Load("Number");
     }
 
     void Update(){
@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour
 
 
     private void CardAttack(){
-
+        
     }
 
     private void CardBlock(){
@@ -111,8 +111,43 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private void RunCard(Card c){
+    private void CardStun(){
 
+    }
+
+    private void RunCard(Card c){
+        foreach(char ch in System.char){
+            switch(ch){
+                case 'A':
+                    CardAttack();
+                    break;
+                case 'B':
+                    CardBlock();
+                    break;
+                case 'D':
+                    //Draw
+                    break;
+                case 'H':
+                    //Heal
+                    break;
+                case 'M':
+                    //Magic Up
+                    break;
+                case 'T': //Tank
+                    //+1 Character Defence
+                    break;
+                case 'R': //(Don't) Rotate
+                    break; //Skip Swap
+                case '+': //Party Heal
+                    break;
+                case 'S':
+                    CardSwap();
+                    break;
+                case 'Z':
+                    CardStun();
+                    break;
+            }
+        }
     }
 
 }
