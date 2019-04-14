@@ -22,10 +22,19 @@ public class GameManager : MonoBehaviour
         cardQueue = new Queue<Card>();
     	anim = GetComponent<Animator>();
         number = Resources.Load("Number");
+
+        if(enemy == null)
+            GameObject.Find("BadGuyShade");
+
     }
 
     void Update(){
     	AnimatorStateInfo currentState = anim.GetCurrentAnimatorStateInfo(0);
+
+        if(anim.IsInTransition()) return;
+
+        anim.SetInteger("playerEnergy", party.energy);
+
     	if(currentState.IsName("BattleSetup")){
     		BattleSetup();
     	} else if(currentState.IsName("PlayerDrawPhase")){
@@ -57,46 +66,28 @@ public class GameManager : MonoBehaviour
     }
 
     private void PlayerDrawPhase(){
-        //Draw 5 Cards
-        for(int i = 0; i < 5; i++)
-        {
-            if(hand.Count <= 5)
-            {
-                hand.Add(listOFAllCards[Random.Range(0, listOFAllCards.Length - 3)]);
-                Debug.Log("AAAA");
-            }
-
-        }
+        party.energy = 3;
+        anim.SetTrigger("skipSwapPhase");
         anim.SetTrigger("playerHasDrawn");
     }
 
     private void PlayerActionPhase(){
         Card c;
-        if (cardQueue.Count <= 0)
-        {
-            return;
-        }
-        else
-        {
-            c = cardQueue.Dequeue();
-            if (c == null)
-                return;
-        }
-
+        if (cardQueue.Count <= 0) return;
+        c = cardQueue.Dequeue();
         RunCard(c);
         party.energy--;
-        anim.SetInteger("playerEnergy",  party.energy);
     }
 
     private void EnemyActionPhase(){
         int rNum = Random.Range(0, 2);
         enemy.targets[rNum].health -= enemy.attack;
-        MakeNumber(NumberIndicatorType.Damage, 10, enemy.targets[rNum].transform.position);
+        MakeNumber(NumberIndicatorType.Damage, (int) Random.Range(4, 10), enemy.targets[rNum].transform.position);
         anim.SetTrigger("enemyIsDone");
     }
 
     private void ReturnCardsToDeckPhase(){
-
+        anim.SetTrigger("handIsEmpty");
     }
 
     private void PlayerSwapPhase(){
