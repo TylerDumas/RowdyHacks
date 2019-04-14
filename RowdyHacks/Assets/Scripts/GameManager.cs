@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private Animator anim;
-    private List<Character> characterList;
+    private Queue<Character> characterList;
     private List<Enemy> enemyList;
 
 
@@ -38,7 +38,10 @@ public class GameManager : MonoBehaviour
     }
 
     private void BattleSetup(){
-    	;
+    	//TODO set up character positions
+        //TODO set up character health
+        //TODO set up set up player decks and hands
+        //TODO set up 
     }
 
     private void PlayerDrawPhase(){
