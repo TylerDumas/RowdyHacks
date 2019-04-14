@@ -15,4 +15,6 @@ MonoBehaviour:
   nameOfCard: Guard
   description: Swap + Block
   artwork: {fileID: 0}
+  attack: 0
+  defend: 0
   type: Knight

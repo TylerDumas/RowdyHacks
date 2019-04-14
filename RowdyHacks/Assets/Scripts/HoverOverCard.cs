@@ -12,9 +12,11 @@ public class HoverOverCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public void OnPointerEnter(PointerEventData eventData)
     { 
         animator.SetBool("isHovering", true);
+        transform.SetAsFirstSibling();
     }
     public void OnPointerExit(PointerEventData eventData)
     {
         animator.SetBool("isHovering", false);
+        transform.SetAsLastSibling();
     }
 }
