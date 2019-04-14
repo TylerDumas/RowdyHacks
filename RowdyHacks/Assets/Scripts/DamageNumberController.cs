@@ -18,7 +18,7 @@ public class DamageNumberController : MonoBehaviour
 
 	void Start(){
 		tmpro = GetComponent<TextMeshPro>();
-		tmpro.SetText("{0}", 3);
+		tmpro.SetText("{0}", damageValue);
 	
 		start = randVec3() * volatility + transform.position;
 		end = start + Vector3.up * height + randVec3() * volatility;
@@ -43,13 +43,6 @@ public class DamageNumberController : MonoBehaviour
 			yield return null;
 		}
 		DestroyObject(gameObject);
-	}
-
-	void Update(){
-		if(Input.GetKeyDown(KeyCode.Space)){
-			transform.position = Vector3.zero;
-			Start();
-		}
 	}
 
 	void OnDrawGizmos(){
