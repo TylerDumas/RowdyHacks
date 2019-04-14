@@ -82,9 +82,9 @@ public class GameManager : MonoBehaviour
             targetPlayer.TakeDamage(damage);
             MakeNumber(NumberIndicatorType.Damage, damage, location);
         } else { //Block
-            MakeNumber(NumberIndicatorType.Block, (int) Random.Range(1, 10), EnemyList[0].transform.position);
+            MakeNumber(NumberIndicatorType.Block, (int) Random.Range(1, 10), enemyList[0].transform.position);
         }
-        amin.setTrigger("enemyIsDone");
+        anim.SetTrigger("enemyIsDone");
     }
 
     private void ReturnCardsToDeckPhase(){
