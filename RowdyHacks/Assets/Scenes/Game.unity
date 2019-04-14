@@ -308,6 +308,19 @@ MonoBehaviour:
   defense: 5
   magic: 1
   characterName: Knight
+  classCards:
+  - {fileID: 11400000, guid: 1d7542ccb109c49ba91f5d5cc0ba0898, type: 2}
+  - {fileID: 11400000, guid: 6c7c36165d7474a03b56daa0bc3bdb42, type: 2}
+  - {fileID: 11400000, guid: 657d41ad4ba6a430d92de72b570d112c, type: 2}
+  - {fileID: 11400000, guid: 325959946e8834b2ca2d2be9ef02c8c7, type: 2}
+  - {fileID: 11400000, guid: d40a7442daa464c19bd12fc97a83b5a3, type: 2}
+  - {fileID: 11400000, guid: 2f8923400169240b5a8aed805e55f060, type: 2}
+  - {fileID: 11400000, guid: e30311721caf14d4990714297b1c6325, type: 2}
+  - {fileID: 11400000, guid: 0660f2c0f3a0b4ed4986aa438978114e, type: 2}
+  - {fileID: 11400000, guid: 767d5d2ec23c444a7921d9f7f9f39c47, type: 2}
+  - {fileID: 11400000, guid: a855fdcdfa4114aa280b4223a2e08c59, type: 2}
+  - {fileID: 11400000, guid: ac1f020bcb8c842d5a270f915abdc3ec, type: 2}
+  type: Knight
 --- !u!1 &89959313
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,6 +895,7 @@ MonoBehaviour:
   defense: 0
   magic: 0
   characterName: 
+  classCards: []
 --- !u!1 &541701007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1826,6 +1840,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690907033489204843, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690907033489204843, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e974c8556d66e44f3ad2deeacdef0621, type: 3}
@@ -2956,6 +2980,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 401989e10cd2f45a08f87c8c3cdfa463,
         type: 2}
+    - target: {fileID: 7690907032033337642, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -2964,6 +2993,11 @@ PrefabInstance:
     - target: {fileID: 7690907032033337640, guid: e974c8556d66e44f3ad2deeacdef0621,
         type: 3}
       propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690907033489204837, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7690907033489204843, guid: e974c8556d66e44f3ad2deeacdef0621,
@@ -2975,6 +3009,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690907033489204843, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690907033489204843, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690907033489204843, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690907033489204843, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690907033489204843, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 258
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690907033489204843, guid: e974c8556d66e44f3ad2deeacdef0621,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e974c8556d66e44f3ad2deeacdef0621, type: 3}

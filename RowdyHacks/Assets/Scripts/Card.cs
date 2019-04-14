@@ -1,25 +1,24 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Card : ScriptableObject
 {
     public string nameOfCard;    //Name of the card
-    //public string type;    //Knight, Ranger, etc
     public string description;     //Description of the card
 
     public Sprite artwork;  //Character drawing
 
-    public int attack;
-
-    public int defend;
 }
 [CreateAssetMenu(fileName = "New Card", menuName = "Cards/Generic Card")]
 public class GenericCard: Card{
     public string type = "Generic";
+
 }
 [CreateAssetMenu(fileName = "New Card", menuName = "Cards/Knight Card")]
-public class KnightCard : Card{     //Card for Knight
+public class KnightCard : Card
+{     //Card for Knight
     public string type = "Knight";
 }
 [CreateAssetMenu(fileName = "New Card", menuName = "Cards/Ranger Card")]
