@@ -6,8 +6,6 @@ using UnityEngine;
 public class Knight : Character
 {
     public List<Action<Enemy>> possibleMoves = new List<Action<Enemy>>();    //list of possible moves
-    public string type = "Knight";  //Type of Card
-
     public void Start()     //Calls before first frame
     { 
         health = 20;

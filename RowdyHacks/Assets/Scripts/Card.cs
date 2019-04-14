@@ -10,5 +10,5 @@ public abstract class Card : ScriptableObject
     public string actions; //String representing the methods
 
     public Sprite artwork;  //Character drawing
-
+    public char type;
 }

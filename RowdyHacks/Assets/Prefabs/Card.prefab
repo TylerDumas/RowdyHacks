@@ -247,6 +247,7 @@ GameObject:
   - component: {fileID: 7690907032736345633}
   - component: {fileID: 7690907032736345632}
   - component: {fileID: 7690907032736345638}
+  - component: {fileID: 1175061648}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -263,7 +264,7 @@ RectTransform:
   m_GameObject: {fileID: 7690907032736345634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.67, y: 1.67, z: 1.67}
   m_Children:
   - {fileID: 7690907032033337643}
   - {fileID: 7690907033489204842}
@@ -330,7 +331,30 @@ MonoBehaviour:
   cardDescription: {fileID: 7690907033489204843}
   cardArtwork: {fileID: 7690907032379753976}
   cardTypeIndicator: {fileID: 7690907033014936215}
-  card: {fileID: 0}
+  card: {fileID: 11400000, guid: 401989e10cd2f45a08f87c8c3cdfa463, type: 2}
+  gm: {fileID: 0}
+  knightImage: {fileID: 21300000, guid: 6e094419a5b494056b31f33ed3a01fda, type: 3}
+  rangerImage: {fileID: 21300000, guid: 9c41bb112b7364a77b33e7ac52e1c998, type: 3}
+  healerImage: {fileID: 21300000, guid: 9c41bb112b7364a77b33e7ac52e1c998, type: 3}
+--- !u!95 &1175061648
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7690907032736345634}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 62bcccb8eaddc44b69711c3cdbd56c82, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7690907033014936209
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +420,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 6e094419a5b494056b31f33ed3a01fda, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
