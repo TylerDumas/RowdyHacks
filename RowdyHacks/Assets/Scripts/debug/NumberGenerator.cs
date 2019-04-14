@@ -15,7 +15,7 @@ public class NumberGenerator : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space)){
-        	int damage = (int) Mathf.Round(UnityEngine.Random.Range(1, 100));
+        	int damage = (int) Mathf.Round(UnityEngine.Random.Range(1, 25));
         	Debug.Log(String.Format("New Damage: {0}", damage));
         	GameObject number = Instantiate(numberPrefab) as GameObject;
         	number.GetComponent<DamageNumberController>().setDamageValue(damage);
