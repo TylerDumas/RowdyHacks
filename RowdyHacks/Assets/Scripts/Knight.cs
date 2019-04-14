@@ -19,5 +19,6 @@ public class Knight : Character
     public override void TakeDamage(int amount)
     {
         this.defense -= amount;
+        //instantiate damage numbers
     }
 }
