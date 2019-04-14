@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     private Queue<Card> cardQueue;
     public List<Card> hand;
 
+    public Card[] listOFAllCards;
+
     private Object number;
 
     void Start(){
@@ -48,7 +50,6 @@ public class GameManager : MonoBehaviour
         foreach(Character character in characters)  //Create Characters
         {
             party.characterList.Add(character);
-            Debug.Log(character.name + "joined" + party.ToString());
         }
         anim.SetTrigger("setupComplete");
     }
@@ -57,13 +58,13 @@ public class GameManager : MonoBehaviour
         //Draw 5 Cards
         for(int i = 0; i < 5; i++)
         {
-            Card cardForHand = cardQueue.Dequeue();
-            hand.Add(cardForHand);
+            hand.Add(listOFAllCards[Random.Range(0,listOFAllCards.Length-2)]);
+            Debug.Log("Added a card");
         }
     }
 
     private void PlayerActionPhase(){
-        Card c = getClickedCard();
+        Card c = cardQueue.Dequeue();
         if(c == null)
             return;
         RunCard(c);
@@ -130,7 +131,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private void RunCard(Card c){
+    public void RunCard(Card c){
         foreach(char ch in c.actions){
             switch(ch){
                 case 'A':
