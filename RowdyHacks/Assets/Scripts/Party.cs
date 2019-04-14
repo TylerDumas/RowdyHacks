@@ -8,12 +8,14 @@ using UnityEngine;
  */
 public class Party
 {
-	private List<Character> characterList;
+	public List<Character> characterList;
 	private int block;
 	public int energy;
 
-	public Party() {
-
+	public Party(int block, int energy) {
+        this.characterList = new List<Character>();
+        this.block = block;
+        this.energy = energy;
 	}
 
 	/*
@@ -24,14 +26,14 @@ public class Party
 	 *    The amount of times to move the front most
 	 *    unit to the back.
 	 */
-	public void Rotate(SwapDircetion dir) {
+	public void Rotate(SwapDirection dir) {
 		Character c;
 		int index;
-		if(dir == SwapDircetion.Left){
+		if(dir == SwapDirection.Left){
 			c = characterList[0];
 			characterList.RemoveAt(0);
 			characterList.Add(c);
-		} else if(dir == SwapDircetion.Right){
+		} else if(dir == SwapDirection.Right){
 			c = characterList[2];
 			characterList.RemoveAt(2);
 			characterList.Insert(0, c);
@@ -79,7 +81,7 @@ public class Party
 	}
 }
 
-public enum SwapDircetion {
+public enum SwapDirection {
 	Right,
 	Left
 }

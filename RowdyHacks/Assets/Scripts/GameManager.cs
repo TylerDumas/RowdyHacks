@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+    private Character[] characters;
     private Animator anim;
     private List<Enemy> enemyList;
     private Party party;
     private Queue<Card> cardQueue;
+    public List<Card> hand;
 
     private Object number;
-
 
     void Start(){
         cardQueue = new Queue<Card>();
@@ -42,14 +44,23 @@ public class GameManager : MonoBehaviour
     }
 
     private void BattleSetup(){
-    	//TODO set up character positions
-        //TODO set up character health
-        //TODO set up set up player decks and hands
-        //TODO set up 
+        party = new Party(0, 3);        //Create Party
+        foreach(Character character in characters)  //Create Characters
+        {
+            party.characterList.Add(character);
+            Debug.Log(character.name + "joined" + party.ToString());
+        }
+        anim.SetTrigger("setupComplete");
     }
 
     private void PlayerDrawPhase(){
-
+        //Draw 5 Cards
+        for(int i = 0; i < 5; i++)
+        {
+            Card cardForHand = cardQueue.Dequeue();
+            hand.Add(cardForHand);
+        }
+        anim.SetTrigger("skipSwapPhase");
     }
 
     private void PlayerActionPhase(){
@@ -62,11 +73,22 @@ public class GameManager : MonoBehaviour
     }
 
     private void EnemyActionPhase(){
-
+        float choice = Random.value;
+        if(choice < .5f) { //Attack
+            int target = Random.Range(0,2);
+            Character targetPlayer = party.characterList[target];
+            Vector3 location = targetPlayer.transform.position;
+            int damage = (int) Random.Range(1, 10);
+            targetPlayer.TakeDamage(damage);
+            MakeNumber(NumberIndicatorType.Damage, damage, location);
+        } else { //Block
+            MakeNumber(NumberIndicatorType.Block, (int) Random.Range(1, 10), enemyList[0].transform.position);
+        }
+        anim.SetTrigger("enemyIsDone");
     }
 
     private void ReturnCardsToDeckPhase(){
-
+        anim.SetTrigger("handIsEmpty");
     }
 
     private void PlayerSwapPhase(){
@@ -93,7 +115,7 @@ public class GameManager : MonoBehaviour
             if (Physics.Raycast(ray, out hit)){
                  if (hit.transform != null) {
                     Debug.Log("HIT A CARD.");
-                     c = hit.transform.gameObject.GetComponent<CardDisplay>().getCard();
+                     c = hit.transform.gameObject.GetComponent<CardDisplay>().GetCard();
                     Debug.Log(c.actions);
                  }
              }
@@ -101,7 +123,6 @@ public class GameManager : MonoBehaviour
 
         return c;
     }
-
 
     private void CardAttack(){
         int damage = party.GetFowardCharacter().attack;

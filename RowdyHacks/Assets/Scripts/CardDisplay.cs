@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class CardDisplay : MonoBehaviour, IPointerClickHandler
+public class CardDisplay : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI cardName;   //Text element for name
@@ -46,12 +46,9 @@ public class CardDisplay : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    public Card getCard()
+    public Card GetCard()
     {
         return card;
     }
 
-    public void OnPointerClick(PointerEventData pointerEventData){
-    	gm.PrepareCard(card);
-    }
 }
