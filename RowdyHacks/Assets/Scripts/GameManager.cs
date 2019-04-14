@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
 
     void Start(){
-    	admin = GetComponent<anim>();
+    	anim = GetComponent<anim>();
     }
 
     void Update(){
@@ -35,10 +35,6 @@ public class GameManager : MonoBehaviour
     	} else if(CurrentState.IsName("Cleanup")){
     		Cleanup();
     	}
-    }
-
-    public RegisterPlayer(Character c) {
-
     }
 
     private void BattleSetup(){
@@ -74,7 +70,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void Cleanup() {
-    	
+
     }
 
 }
