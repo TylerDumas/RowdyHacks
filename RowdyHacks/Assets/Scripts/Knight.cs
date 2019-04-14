@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Knight : Character
 {
-    public List<Action> possibleMoves = new List<Action>();    //list of possible moves
+    public List<Action<Enemy>> possibleMoves = new List<Action<Enemy>>();    //list of possible moves
     public string type = "Knight";  //Type of Card
 
     public void Start()     //Calls before first frame
@@ -17,16 +17,17 @@ public class Knight : Character
         characterName = "Knight";
 
         /* Create all actions */
-        Action guard = Guard;
-        Action bash = Bash;
-        Action swing = Swing;
-        Action defensiveStance = DefensiveStance;
-        Action fancyStrike = FancyStrike;
-        Action brace = Brace;
-        Action standGround = StandGround;
-        Action shieldBash = ShieldBash;
-        Action charge = Charge;
-        Action hunkerDown = HunkerDown;
+        Action<Enemy> basicAttack = Attack;
+        Action<Enemy> guard = Guard;
+        Action<Enemy> bash = Bash;
+        Action<Enemy> swing = Swing;
+        Action<Enemy> defensiveStance = DefensiveStance;
+        Action<Enemy> fancyStrike = FancyStrike;
+        Action<Enemy> brace = Brace;
+        Action<Enemy> standGround = StandGround;
+        Action<Enemy> shieldBash = ShieldBash;
+        Action<Enemy> charge = Charge;
+        Action<Enemy> hunkerDown = HunkerDown;
 
         possibleMoves.Add(guard);
         possibleMoves.Add(bash);
@@ -53,43 +54,47 @@ public class Knight : Character
     /*
      * All possible methods for the Knight Cards 
      */
-    public void Guard()
+    public void Attack(Enemy enemy)
     {
 
     }
-    public void Bash()
+    public void Guard(Enemy enemy)
     {
 
     }
-    public void Swing()
+    public void Bash(Enemy enemy)
     {
 
     }
-    public void DefensiveStance()
+    public void Swing(Enemy enemy)
     {
 
     }
-    public void FancyStrike()
+    public void DefensiveStance(Enemy enemy)
     {
 
     }
-    public void Brace()
+    public void FancyStrike(Enemy enemy)
     {
 
     }
-    public void StandGround()
+    public void Brace(Enemy enemy)
     {
 
     }
-    public void ShieldBash()
+    public void StandGround(Enemy enemy)
     {
 
     }
-    public void Charge()
+    public void ShieldBash(Enemy enemy)
     {
 
     }
-    public void HunkerDown()
+    public void Charge(Enemy enemy)
+    {
+
+    }
+    public void HunkerDown(Enemy enemy)
     {
 
     }

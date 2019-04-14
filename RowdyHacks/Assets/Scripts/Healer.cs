@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Healer : Character
 {
-   
+
+    public List<Action<Enemy>> possibleMoves = new List<Action<Enemy>>();
+
     // Start is called before the first frame update
     void Start()
     {
