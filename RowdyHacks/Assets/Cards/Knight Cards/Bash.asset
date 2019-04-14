@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KnightCard
   nameOfCard: Bash
   description: 
+  actions: AZ
   artwork: {fileID: 0}
   type: Knight

@@ -6,10 +6,15 @@ using UnityEngine;
  * Class that manages the party. Acts as a damage target for enemies
  * And divies up damage and such as needed.
  */
-public class Party : MonoBehaviour
+public class Party
 {
-	private Queue<Character> characterList;
+	private List<Character> characterList;
 	private int block;
+	public int energy;
+
+	public Party() {
+		
+	}
 
 	/*
 	 * Rotates the party moving the foward most unit
@@ -19,9 +24,17 @@ public class Party : MonoBehaviour
 	 *    The amount of times to move the front most
 	 *    unit to the back.
 	 */
-	public void Rotate(int amount=1) {
-		for(; amount > 0; amount--){
-			characterList.Enqueue(characterList.Dequeue());
+	public void Rotate(SwapDircetion dir) {
+		Character c;
+		int index;
+		if(dir == SwapDircetion.Left){
+			c = characterList[0];
+			characterList.RemoveAt(0);
+			characterList.Add(c);
+		} else if(dir == SwapDircetion.Right){
+			c = characterList[2];
+			characterList.RemoveAt(2);
+			characterList.Insert(0, c);
 		}
 	}
 
@@ -33,7 +46,7 @@ public class Party : MonoBehaviour
 	 *    stratagy for the incoming attack.
 	 */
 	public void TakeDamage(DamageEvent damage){
-		Character activeCharacter = characterList.Peek();
+		Character activeCharacter = characterList[2];
 
 		switch(damage.distribution){
 			case DistributionType.ActiveOnly:
@@ -59,4 +72,9 @@ public class Party : MonoBehaviour
 	public void ResetBlock(){
 		this.block = 0;
 	}
+}
+
+public enum SwapDircetion {
+	Right,
+	Left
 }

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: DefensiveStance
-  m_EditorClassIdentifier: Assembly-CSharp::KnightCard
-  nameOfCard: Defensive Stance
+  m_Name: TwinShot
+  m_EditorClassIdentifier: Assembly-CSharp::RangerCard
+  nameOfCard: Twin Shot
   description: 
-  actions: BT
+  actions: AA
   artwork: {fileID: 0}
-  type: Knight
+  type: Ranger

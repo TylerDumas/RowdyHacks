@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KnightCard
   nameOfCard: Brace
   description: 
+  actions: BB
   artwork: {fileID: 0}
   type: Knight

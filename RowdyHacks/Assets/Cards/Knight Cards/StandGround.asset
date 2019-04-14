@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: StandGround
   m_EditorClassIdentifier: Assembly-CSharp::KnightCard
-  nameOfCard: StandGround
+  nameOfCard: Stand Ground
   description: 
+  actions: B
   artwork: {fileID: 0}
   type: Knight

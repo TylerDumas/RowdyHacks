@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KnightCard
   nameOfCard: Tyler
   description: Who wants a hug?
+  actions: 
   artwork: {fileID: 0}
-  type: Knight
+  type: 75
+  type: 

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: DefensiveStance
-  m_EditorClassIdentifier: Assembly-CSharp::KnightCard
-  nameOfCard: Defensive Stance
+  m_Name: Smite
+  m_EditorClassIdentifier: Assembly-CSharp::HealerCard
+  nameOfCard: Smite
   description: 
-  actions: BT
+  actions: ZH
   artwork: {fileID: 0}
-  type: Knight
+  type: Healer

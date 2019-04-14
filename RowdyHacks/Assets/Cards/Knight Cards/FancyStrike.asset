@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: FancyStrike
   m_EditorClassIdentifier: Assembly-CSharp::KnightCard
-  nameOfCard: FancyStrike
+  nameOfCard: Fancy Strike
   description: 
+  actions: AS
   artwork: {fileID: 0}
   type: Knight

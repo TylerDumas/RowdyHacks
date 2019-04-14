@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KnightCard
   nameOfCard: Charge
   description: 
+  actions: AD
   artwork: {fileID: 0}
   type: Knight
