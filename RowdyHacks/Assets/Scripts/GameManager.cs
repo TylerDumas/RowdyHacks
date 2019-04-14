@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     private Object number;
 
     void Start(){
+        party = new Party(0, 3);  
         cardQueue = new Queue<Card>();
     	anim = GetComponent<Animator>();
         number = Resources.Load("Number");
@@ -24,6 +25,8 @@ public class GameManager : MonoBehaviour
 
     void Update(){
     	AnimatorStateInfo currentState = anim.GetCurrentAnimatorStateInfo(0);
+        anim.SetInteger("playerEnergy",  party.energy);
+
     	if(currentState.IsName("BattleSetup")){
     		BattleSetup();
     	} else if(currentState.IsName("PlayerDrawPhase")){
@@ -46,7 +49,6 @@ public class GameManager : MonoBehaviour
     }
 
     private void BattleSetup(){
-        party = new Party(0, 3);        //Create Party
         foreach(Character character in characters)  //Create Characters
         {
             party.characterList.Add(character);
@@ -65,33 +67,31 @@ public class GameManager : MonoBehaviour
             }
 
         }
+        anim.SetTrigger("skipSwapPhase");
         anim.SetTrigger("playerHasDrawn");
     }
 
     private void PlayerActionPhase(){
         Card c;
-        if (cardQueue.Count <= 0)
-        {
-            return;
-        }
-        else
-        {
-            c = cardQueue.Dequeue();
-            if (c == null)
-                return;
-        }
+        if (cardQueue.Count == 0) return;
 
+        c = cardQueue.Dequeue();
         RunCard(c);
         party.energy--;
-        anim.SetInteger("playerEnergy",  party.energy);
     }
 
     private void EnemyActionPhase(){
+        float choice = Random.value;
+        if(choice < .5f){
 
+        } else {
+            MakeNumber(NumberIndicatorType.Block, (int) Random.Range(1, 10), )
+        }
+        anim.SetTrigger("enemyIsDone");
     }
 
     private void ReturnCardsToDeckPhase(){
-
+        anim.SetTrigger("handsEmpty");
     }
 
     private void PlayerSwapPhase(){
