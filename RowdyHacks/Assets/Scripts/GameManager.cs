@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private Object number;
 
     void Start(){
+        party = new Party(0, 3);
         cardQueue = new Queue<Card>();
     	anim = GetComponent<Animator>();
         number = Resources.Load("Number");
@@ -31,7 +32,7 @@ public class GameManager : MonoBehaviour
     void Update(){
     	AnimatorStateInfo currentState = anim.GetCurrentAnimatorStateInfo(0);
 
-        if(anim.IsInTransition()) return;
+        if(anim.IsInTransition(0)) return;
 
         anim.SetInteger("playerEnergy", party.energy);
 
@@ -57,7 +58,6 @@ public class GameManager : MonoBehaviour
     }
 
     private void BattleSetup(){
-        party = new Party(0, 3);        //Create Party
         foreach(Character character in characters)  //Create Characters
         {
             party.characterList.Add(character);
@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void ReturnCardsToDeckPhase(){
-        anim.SetTrigger("handIsEmpty");
+        anim.SetTrigger("handsEmpty");
     }
 
     private void PlayerSwapPhase(){
@@ -124,13 +124,15 @@ public class GameManager : MonoBehaviour
     }
 
     private void CardAttack(){
-        int damage = party.GetFowardCharacter().attack;
+        int damage = (int) Random.Range(3, 25);
         enemy.TakeDamage(damage);
         MakeNumber(NumberIndicatorType.Damage, damage, enemy.transform.position);
     }
 
     private void CardBlock(){
-
+        int blockAmount = (int) Random.Range(3, 10);
+        Vector3 location = party.GetFowardCharacter().transform.position;
+        MakeNumber(NumberIndicatorType.Block, blockAmount, location);
     }
 
     private void CardSwap(){
@@ -139,6 +141,13 @@ public class GameManager : MonoBehaviour
 
     private void CardStun(){
 
+    }
+
+    private void CardHeal(){
+        Character target = party.characterList[Random.Range(0,2)];
+        Vector3 location = target.transform.position;
+        int healAmount = Random.Range(1, 10);
+        MakeNumber(NumberIndicatorType.Heal, healAmount, location);
     }
 
     public void RunCard(Card c){
@@ -156,7 +165,7 @@ public class GameManager : MonoBehaviour
                 case 'E': //Energy
                     //Add energy
                 case 'H':
-                    //Heal
+                    CardHeal();
                     break;
                 case 'K': //Kill
                     //Attack Up
